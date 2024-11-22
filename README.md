@@ -67,7 +67,7 @@ http://localhost:8000/graphql/
 ```
 ### Testing the Queries
 
-(https://file%2B.vscode-resource.vscode-cdn.net/var/folders/rl/064zqlx50631hf9hmnnn50680000gn/T/TemporaryItems/NSIRD_screencaptureui_AQkBAd/Screen%20Shot%202024-11-22%20at%2012.09.36%20AM.png?version%3D1732259395627)
+Screen Shot 2024-11-22 at 12.14.29 AM.png
 
 
 
