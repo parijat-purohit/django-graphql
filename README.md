@@ -8,6 +8,8 @@ This project demonstrates how to implement a GraphQL API using Django with two m
 - Fetch detailed information about books along with their ratings and recommendations.
 
 ## Models
+
+
 ### Book
 
 This mode represents a book and includes the following fields.
@@ -57,13 +59,13 @@ class Query(graphene.ObjectType):
         return FavoriteBook.objects.filter(recommend_to_read=rec)
 ```
 
-### Simple Setup Demonstration![Alt text]
+### Setup Summary
 
 For this demonstration, we used a simple setup incorporating a `Dockerfile` and `docker-compose`. The GraphQL setup was based on the guidelines provided in the [Graphene documentation](https://docs.graphene-python.org/en/latest/).
 
 On our localhost, we made our query in following GraphQL endpoint.
 ```python
-http://localhost:8000/graphql/
+http://localhost:8000/graphql
 ```
 ### Testing the Queries
 
