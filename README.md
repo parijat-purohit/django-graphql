@@ -155,6 +155,11 @@ In REST APIs, multiple endpoints are required to fetch related resources (e.g., 
 ### 3. Client-Specified Queries
 In REST APIs, the server defines what data is returned. This leads to rigidity and more API versions. In GraphQL, the client can define the structure of the response, making it highly flexible and adaptable to changing requirements.
 
+## Why Not?
+
+### 1. Caching Challenge
+GraphQL primarily involves two types of operations: `Query` and `Mutation`, both of which typically use the same `POST` endpoint. The use of a single endpoint for both operations, combined with the non-idempotent nature of `POST` requests and the dynamic structure of GraphQL queries, makes caching more complex and challenging to implement.
+
 ## Conclusion
 
 This Django GraphQL project simplifies querying and managing related data with a flexible, single-query model, demonstrating how GraphQL can outperform traditional REST APIs by reducing over-fetching, under-fetching, and the need for multiple endpoints. As the application grows, adding new fields or resources can be done without creating new versions or endpoints, ensuring scalability and efficiency.
