@@ -67,7 +67,7 @@ http://localhost:8000/graphql/
 ```
 ### Testing the Queries
 
-Use the GraphiQL interface (available at the `/graphql` endpoint) or any GraphQL client (such as Postman) to test the following queries:
+Use the GraphiQL interface (available at the `/graphql` endpoint) to test the following queries:
 
 ### Fetch all books:
 
@@ -80,19 +80,55 @@ Use the GraphiQL interface (available at the `/graphql` endpoint) or any GraphQL
 }
 ```
 
-### Fetch books based on their recommendation status (`recommend_to_read`):
-
-## 5. Testing the Queries
-
-Use the GraphiQL interface (available at the `/graphql` endpoint) or any GraphQL client (such as Postman) to test the following queries:
-
-### Fetch all books:
+### Sample Response
 
 ```python
 {
-  allBooks {
-    name
-    authorName
+  "data": {
+    "allBooks": [
+      {
+        "name": "1984",
+        "authorName": "George Orwell"
+      },
+      {
+        "name": "Animal Farm",
+        "authorName": "George Orwell"
+      }
+    ]
+  }
+}
+```
+
+### Fetch books based on their recommendation status (`recommend_to_read`):
+
+
+```python
+{
+  bookByRec(rec: true) {
+    book {
+      name
+      authorName
+    }
+    rating
+    recommendToRead
+  }
+}
+```
+
+### Sample Response
+
+```python
+{
+  "data": {
+    "bookByRec": [
+      {
+        "book": {
+          "name": "1984",
+          "authorName": "George Orwell"
+        },
+        "rating": 10
+      }
+    ]
   }
 }
 ```
