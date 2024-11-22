@@ -66,7 +66,7 @@ On our localhost, we made our query in following GraphQL endpoint.
 http://localhost:8000/graphql/
 ```
 ### Testing the Queries
-[!Visual_Appearance](Screen Shot 2024-11-22 at 12.14.29 AM.png)
+
 Use the GraphiQL interface (available at the `/graphql` endpoint) or any GraphQL client (such as Postman) to test the following queries:
 
 ### Fetch all books:
