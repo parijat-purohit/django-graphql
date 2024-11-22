@@ -43,7 +43,7 @@ class FavoriteBook(models.Model):
 
 The GraphQL schema exposes the following queries:
 - `allBooks`: Fetch all books.
-- `bookByRec: Fetch books filtered by their recommendation status.
+- `bookByRec`: Fetch books filtered by their recommendation status.
 
 ```python
 class Query(graphene.ObjectType):
