@@ -63,6 +63,14 @@ class Query(graphene.ObjectType):
 
 For this demonstration, we used a simple setup incorporating a `Dockerfile` and `docker-compose`. The GraphQL setup was based on the guidelines provided in the [Graphene documentation](https://docs.graphene-python.org/en/latest/).
 
+For convenience, you can directly run the script to populate the db with some test data.
+
+```python
+python manage.py generate_book_data
+```
+
+The logs will be preserved in the `logs/graphql_api.log` file.
+
 On our localhost, we made our query in following GraphQL endpoint.
 ```python
 http://localhost:8000/graphql
