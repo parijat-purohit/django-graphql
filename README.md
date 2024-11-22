@@ -71,7 +71,7 @@ Use the GraphiQL interface (available at the `/graphql` endpoint) or any GraphQL
 
 ### Fetch all books:
 
-```json
+```python
 {
   allBooks {
     name
@@ -88,7 +88,7 @@ Use the GraphiQL interface (available at the `/graphql` endpoint) or any GraphQL
 
 ### Fetch all books:
 
-```json
+```python
 {
   allBooks {
     name
