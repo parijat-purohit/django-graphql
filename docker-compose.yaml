@@ -1,0 +1,11 @@
+services:
+  web:
+    build: .
+    container_name: django_graphql_web
+    command: python manage.py runserver 0.0.0.0:8000
+    environment:
+      - DJANGO_SETTINGS_MODULE=graphqlapi.settings
+    volumes:
+      - .:/app  # Mount the project directory into the container
+    ports:
+      - "8000:8000"  # Map container's port 8000 to localhost's port 8000
