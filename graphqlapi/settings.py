@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -74,6 +75,37 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'graphqlapi.wsgi.application'
+
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "verbose": {
+            "format": "{levelname} {asctime} {message}",
+            "style": "{",
+        },
+        "simple": {
+            "format": "{levelname} {message}",
+            "style": "{",
+        },
+    },
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+        },
+        "file": {
+            "class": "logging.FileHandler",
+            "level": "INFO",  # Logs INFO and above to the file
+            "filename": "logs/graphql_api.log",  # Specify the log file
+            "formatter": "verbose",
+        },
+    },
+    "root": {
+        "handlers": ["console", 'file'],
+        "level": "INFO",
+    },
+}
 
 
 # Database
