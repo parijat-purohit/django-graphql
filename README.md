@@ -71,7 +71,7 @@ Use the GraphiQL interface (available at the `/graphql` endpoint) or any GraphQL
 
 ### Fetch all books:
 
-```graphql
+```json
 {
   allBooks {
     name
@@ -81,14 +81,14 @@ Use the GraphiQL interface (available at the `/graphql` endpoint) or any GraphQL
 ```
 
 ### Fetch books based on their recommendation status (`recommend_to_read`):
-```graphql
+
 ## 5. Testing the Queries
 
 Use the GraphiQL interface (available at the `/graphql` endpoint) or any GraphQL client (such as Postman) to test the following queries:
 
 ### Fetch all books:
 
-```graphql
+```json
 {
   allBooks {
     name
@@ -98,8 +98,6 @@ Use the GraphiQL interface (available at the `/graphql` endpoint) or any GraphQL
 ```
 
 ## Why GraphQL?
-
-## Advantages of GraphQL Over REST
 
 ### 1. Single Endpoint for Multiple Queries
 In REST APIs, multiple endpoints are required to fetch related resources (e.g., `/books`, `/favorites`, `/books/{id}`). With GraphQL, you only need a single `/graphql` endpoint to access and manipulate multiple types of data in a single query.
